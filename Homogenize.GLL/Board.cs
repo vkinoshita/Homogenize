@@ -14,11 +14,11 @@ namespace Homogenize.GLL
         {
             this.size = size;
 
-            this.ititializeBoard();
-            this.makeAdjascents();
+            this.ItitializeBoard();
+            this.MakeAdjascents();
         }
 
-        private void ititializeBoard()
+        private void ItitializeBoard()
         {
             Cells = new List<Cell>();
 
@@ -35,18 +35,18 @@ namespace Homogenize.GLL
             }
         }
 
-        private void makeAdjascents()
+        private void MakeAdjascents()
         {
             for (int x = 0; x < this.size; x++)
             {
                 for (int y = 0; y < this.size; y++)
                 {
-                    makeAdjascent(GetCellAt(x, y));
+                    MakeAdjascent(GetCellAt(x, y));
                 }
             }
         }
 
-        private void makeAdjascent(Cell cell) 
+        private void MakeAdjascent(Cell cell) 
         {
             if (cell.X > 0)
             {

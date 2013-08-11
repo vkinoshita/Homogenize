@@ -7,7 +7,7 @@ namespace Homogenize.GLL
 {
     public class Cell
     {
-        Board b;
+        Board board;
 
         public bool State { get; set; }
 
@@ -18,7 +18,7 @@ namespace Homogenize.GLL
 
         public Cell(Board b)
         {
-            this.b = b;
+            this.board = b;
 
             this.State = false;
             Adjascent = new List<Cell>();
