@@ -10,8 +10,28 @@ namespace Homogenize.GLL
         int size;
         public List<Cell> Cells { get; set; }
 
+        public bool IsResolved 
+        {
+            get 
+            {
+                if (Cells.Any(c => c.State != Cells[0].State))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
         public Board(int size)
         {
+            if (size < 2)
+            {
+                throw new ArgumentException("the size must be greater than 2");
+            }
+
             this.size = size;
 
             this.ItitializeBoard();

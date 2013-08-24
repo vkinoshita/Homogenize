@@ -167,6 +167,21 @@ namespace WindowsGame1
             if (panel != null)
             {
                 panel.Click();
+                CheckForResolvedBoardToShuffle();
+            }
+        }
+
+        private void CheckForResolvedBoardToShuffle() 
+        {
+            if (board.IsResolved)
+            {
+                do
+                {
+                    for (int i = 0; i < 4; i++)
+                    {
+                        Shuffle();    
+                    }
+                } while (board.IsResolved);
             }
         }
 
